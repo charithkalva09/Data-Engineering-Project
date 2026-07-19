@@ -1,21 +1,16 @@
 /*
-===============================================================================
 DDL Script: Create Bronze Tables
-===============================================================================
+
 Script Purpose:
-    This script creates tables in the 'bronze' schema, dropping existing tables
-    if they already exist.
+    This script creates tables in the 'bronze' schema, dropping existing tables if they already exist.
     Run this script to re-define the DDL structure of 'bronze' tables.
-===============================================================================
 */
 
 -- Create schema if it doesn't exist
 CREATE SCHEMA IF NOT EXISTS bronze;
 
--- ============================================================================
--- CRM Customer Information
--- ============================================================================
 
+-- CRM Customer Information
 DROP TABLE IF EXISTS bronze.crm_cust_info;
 
 CREATE TABLE bronze.crm_cstr_info (
@@ -28,10 +23,8 @@ CREATE TABLE bronze.crm_cstr_info (
     cst_create_date    DATE
 );
 
--- ============================================================================
--- CRM Product Information
--- ============================================================================
 
+-- CRM Product Information
 DROP TABLE IF EXISTS bronze.crm_prd_info;
 
 CREATE TABLE bronze.crm_prd_info (
@@ -44,10 +37,8 @@ CREATE TABLE bronze.crm_prd_info (
     prd_end_dt   TIMESTAMP
 );
 
--- ============================================================================
--- CRM Sales Details
--- ============================================================================
 
+-- CRM Sales Details
 DROP TABLE IF EXISTS bronze.crm_sales_details;
 
 CREATE TABLE bronze.crm_sales_details (
@@ -62,10 +53,8 @@ CREATE TABLE bronze.crm_sales_details (
     sls_price    INTEGER
 );
 
--- ============================================================================
--- ERP Location
--- ============================================================================
 
+-- ERP Location
 DROP TABLE IF EXISTS bronze.erp_loc_a101;
 
 CREATE TABLE bronze.erp_loc_a101 (
@@ -73,10 +62,8 @@ CREATE TABLE bronze.erp_loc_a101 (
     cntry VARCHAR(50)
 );
 
--- ============================================================================
--- ERP Customer
--- ============================================================================
 
+-- ERP Customer
 DROP TABLE IF EXISTS bronze.erp_cust_az12;
 
 CREATE TABLE bronze.erp_cust_az12 (
@@ -85,10 +72,8 @@ CREATE TABLE bronze.erp_cust_az12 (
     gen   VARCHAR(50)
 );
 
--- ============================================================================
--- ERP Product Categories
--- ============================================================================
 
+-- ERP Product Categories
 DROP TABLE IF EXISTS bronze.erp_px_cat_g1v2;
 
 CREATE TABLE bronze.erp_px_cat_g1v2 (
