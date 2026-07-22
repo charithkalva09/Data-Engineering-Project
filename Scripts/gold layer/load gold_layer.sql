@@ -46,7 +46,7 @@ DROP VIEW IF EXISTS gold.dim_products;
 CREATE VIEW gold.dim_products AS
 SELECT
     row_number() over (ORDER BY pi.prd_start_dt,pi.prd_key) product_key, -- Surrogate key
-    pi.prd_id produc_id,
+    pi.prd_id product_id,
     pi.prd_key product_number,
     pi.prd_nm product_name,
     pi.cat_id category_id,
